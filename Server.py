@@ -2,6 +2,7 @@ import socket
 
 runProgram = True
 runClient = False
+#TODO idle tolorance.
 
 def server():
     serverName = 'localhost'

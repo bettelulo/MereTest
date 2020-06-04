@@ -1,14 +1,22 @@
 import socket
-
+from datetime import datetime
 runProgram = True
 runClient = False
 #TODO idle tolorance.
+#TODO gemme handshake i en fil. som en slags log/dagbog.
+def logger(client):
+    logTxt = 'Sucess protocol med IP: '
+    logTxt2 = ', oprettet: '
+    logFil = open() #filnavn
+    clipetIP, clientPort = client
+    logTid = str(datetime.now().strptime())
+    logMsg = log + clipetIP + str(clientPort) + logTxt2 + logTid
+
 
 def server():
-    serverName = 'localhost'
-    serverPort = 10000
     clientSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    clientSocket.bind((serverName, serverPort))
+    server_address = ('localhost', 10000)
+    clientSocket.bind(server_address)
 
 
 def quit(message):

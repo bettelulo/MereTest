@@ -1,13 +1,12 @@
 import socket
 server_connection = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-serverName = 'localhost'
-serverPort = 10000
+server_adress = ('localhost', 10000)
 runSystem = True
 runClient = False
 
 #TODO heartbeat 3sek. KEEP ALIVE.
 #TODO configfile
-#TODO gemme handshake i en fil. som en slags log/dagbog.
+
 #TODO MAC packes.
 def handshake():
     conCount = 0

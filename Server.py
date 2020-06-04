@@ -27,12 +27,12 @@ def quit(message):
 
 def handshake():
     count = 0
-    tempConn = serverInfo()
+    tempConn = server()
     while count <= 1:
         FirstStep, tempClient = tempConn.recvfrom(2048)
         connTry = FirstStep.decode()
 
-        runProgram, runClient = conTest(connTry)
+        runProgram, runClient = count(connTry)
         if runProgram and runClient:
             if connTry == "com-0":
                 serverAnswer = "com-0 accept"
@@ -47,10 +47,10 @@ def handshake():
 
                 ###Fiixxxxxxxxxxxxxxxxxxxxxx
 
-        test += 1
+        count += 1
 
 while runProgram:
-### at kører programmet.
+# at kører programmet.
 
 # # opretter upd socket (DGRAM)
 # server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
